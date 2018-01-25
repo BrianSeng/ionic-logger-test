@@ -41,16 +41,30 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
+.controller('PlaylistsCtrl', function($scope, Logger, $injector) {
+    $scope.playlists = [
+        { title: 'Reggae', id: 1 },
+        { title: 'Chill', id: 2 },
+        { title: 'Dubstep', id: 3 },
+        { title: 'Indie', id: 4 },
+        { title: 'Rap', id: 5 },
+        { title: 'Cowbell', id: 6 }
+    ];
+
+    $scope.$on('$ionicView.enter', function() { _init(); });
+
+    function _init() {
+        var logger = new Logger();
+        logger.log("PlaylistsCtrl.init()", { timeStamp: new Date() });
+
+        logger.setLogLevel("info");
+        logger.log("PlaylistsCtrl.init()", { timeStamp: new Date() });
+
+        console.log("Injected Modules ->", $injector);
+        
+    }
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('PlaylistCtrl', function($scope, $stateParams, Logger) {
+    
 });
