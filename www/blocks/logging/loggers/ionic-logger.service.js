@@ -3,7 +3,7 @@
     'use strict';
     
     var svc = 'IonicLogger';
-    angular.module('app.logger')
+    angular.module('blocks.logging')
 
     .service(svc, function() {
         var self = this;

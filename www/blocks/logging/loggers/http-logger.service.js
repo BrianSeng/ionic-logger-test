@@ -3,7 +3,7 @@
     'use strict';
     
     var svc = 'HttpLogger';
-    angular.module('app.logger')
+    angular.module('blocks.logging')
 
     .service(svc, function() 
     {
@@ -11,7 +11,7 @@
         self.send = function (msg) 
         {
             console.info("Sent to DB via HTTP! - " + msg);
-        }
+        };
 
         return self;
     });

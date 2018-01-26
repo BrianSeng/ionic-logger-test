@@ -8,7 +8,7 @@ angular
 .module('starter'
     , ['ionic'
         , 'starter.controllers'
-        , 'app.logger'
+        , 'blocks'
     ]
 )
 

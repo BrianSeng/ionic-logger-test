@@ -1,22 +1,24 @@
 (function () 
 {
     'use strict';
-
+//
+// Log Level Strategy - QUIET
+//
     var svc = 'QuietLevel';
     angular
-        .module('app.logger')
+        .module('blocks.logging')
         .run(registerLevel)
         .service(svc, QuietLevel);
 
     function registerLevel(Logger, QuietLevel) 
     {
-        console.log("Logging Module Run --> QUIET");
+        console.info("LogLevel Module Loaded --> QUIET");
         Logger.levels[QuietLevel.name] = QuietLevel;
     }
     function QuietLevel(HttpLogger) 
     {
         var self = this;
-        self.name = svc;
+        self.name = "QUIET";
 
         self.log = function (msg, options) 
         {

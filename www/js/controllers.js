@@ -41,7 +41,7 @@ angular.module('starter.controllers', [])
         };
     })
 
-    .controller('PlaylistsCtrl', function ($scope, Logger, $injector) {
+    .controller('PlaylistsCtrl', function ($scope, Logger) {
         $scope.playlists = [
             { title: 'Reggae', id: 1 },
             { title: 'Chill', id: 2 },
@@ -56,10 +56,18 @@ angular.module('starter.controllers', [])
         function _init() 
         {
             console.log('**LOGGER LEVELS:');
+
             for (var lvl in Logger.levels) 
             {
                 console.log('--> ' + lvl);
-            }
+            };
+
+            console.info("CURRENT LOGGER --> ", Logger.level());
+
+            // input: SomeLevel.name
+            Logger.setLogLevel("DEBUG");
+            console.info("CURRENT LOGGER --> ", Logger.level());
+            
         }
     })
 
