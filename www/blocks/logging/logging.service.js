@@ -25,7 +25,7 @@
 
             function _error(msg, options) 
             {
-                //check to see that a logger is set and has a log method
+                //check to see that a log lvl is set and has a log method
                 if (_currentLogLvl.error)
                     _currentLogLvl.error(msg, options);
                 //if not, default to the console for now
@@ -34,7 +34,7 @@
             }
             function _warn(msg, options) 
             {
-                //check to see that a logger is set and has a log method
+                //check to see that a log lvl is set and has a log method
                 if (_currentLogLvl.warn)
                     _currentLogLvl.warn(msg, options);
                 //if not, default to the console for now
@@ -43,7 +43,7 @@
             }
             function _log(msg, options) 
             {
-                //check to see that a logger is set and has a log method
+                //check to see that a log lvl is set and has a log method
                 if (_currentLogLvl.log)
                     _currentLogLvl.log(msg, options);
                 //if not, default to the console for now
@@ -52,7 +52,7 @@
             }
             function _info(msg, options) 
             {
-                //check to see that a logger is set and has a log method
+                //check to see that a log lvl is set and has a log method
                 if (_currentLogLvl.info)
                     _currentLogLvl.info(msg, options);
                 //if not, default to the console for now
