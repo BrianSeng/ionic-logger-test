@@ -31,7 +31,14 @@
 //
         function _error(msg, options) 
         {
-            
+            if (IonicLogger.error) 
+            {
+                IonicLogger.error(msg); 
+            }
+            if (FirebaseLogger.error) 
+            {
+                FirebaseLogger.error(msg);    
+            } 
         }
         function _warn(msg, options) 
         {
